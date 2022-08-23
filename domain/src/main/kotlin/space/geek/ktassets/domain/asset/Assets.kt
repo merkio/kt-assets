@@ -18,7 +18,7 @@ data class AssetCreationCommand(
     val url: String?,
     val tags: Map<String, String> = emptyMap(),
     val username: String? = null,
-    val metadata: Map<String, String> = emptyMap(),
+    val metadata: Map<String, String> = emptyMap()
 )
 
 data class AssetUpdateCommand(
@@ -26,11 +26,10 @@ data class AssetUpdateCommand(
     val url: String?,
     val tags: Map<String, String> = emptyMap(),
     val username: String,
-    val metadata: Map<String, String> = emptyMap(),
+    val metadata: Map<String, String> = emptyMap()
 )
 
 data class AssetDeleteCommand(
     val key: String,
     val username: String
 )
-

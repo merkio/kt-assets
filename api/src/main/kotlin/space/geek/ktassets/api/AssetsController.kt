@@ -9,8 +9,4 @@ private val log = KotlinLogging.logger {}
 @RestController
 internal class AssetsController(
     private val assetService: AssetService
-) {
-
-
-
-}
+)

@@ -29,7 +29,6 @@ internal class RepositoryTestBase {
 
     @AfterEach
     fun tearDown() {
-
     }
 
     companion object {
