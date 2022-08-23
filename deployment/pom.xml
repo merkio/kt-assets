@@ -41,6 +41,11 @@
             <artifactId>remote</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>space.geek</groupId>
+            <artifactId>api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
         <!-- ArchUnit: used to enforce code architecture -->
         <dependency>
