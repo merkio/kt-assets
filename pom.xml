@@ -10,6 +10,7 @@
         <module>messaging</module>
         <module>deployment</module>
         <module>remote</module>
+        <module>api</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,6 +26,8 @@
     <description>Application to download and store information about assets on S3 and asset metadata in DB</description>
 
     <properties>
+        <sonar.organization>geek-space</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <java.version>17</java.version>
         <kotlin.version>1.7.10</kotlin.version>
         <testcontainers.version>1.17.3</testcontainers.version>
@@ -164,6 +167,10 @@
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
         <plugins>
             <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
                 <configuration>
@@ -206,6 +213,11 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <excludes>
+                        <exclude>/space/geek/ktassets/domain/**/*</exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>
