@@ -49,13 +49,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-      - if: ${{ github.actor == 'dependabot[bot]' }}
-        name: Build with Maven without Sonar
-        run: >
-          mvn -B clean package --file pom.xml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Upload to codecov.io
         uses: codecov/codecov-action@v3
         with:
@@ -63,3 +56,11 @@ jobs:
           file: ./target/site/jacoco/jacoco.xml
           fail_ci_if_error: true # optional (default = false)
           verbose: true
+
+      - if: ${{ github.actor == 'dependabot[bot]' }}
+        name: Build with Maven without Sonar
+        run: >
+          mvn -B clean package --file pom.xml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
