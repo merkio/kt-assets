@@ -1,9 +1,8 @@
 package space.geek.ktassets.api.asset
 
-import org.springframework.web.bind.annotation.RestController
-import space.geek.ktassets.appilcation.asset.AssetService
-
 import mu.KotlinLogging
+import org.springframework.web.bind.annotation.RestController
+import space.geek.ktassets.application.asset.AssetService
 
 private val log = KotlinLogging.logger {}
 

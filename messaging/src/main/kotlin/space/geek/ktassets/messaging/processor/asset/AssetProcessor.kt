@@ -1,8 +1,8 @@
-package space.geek.ktassets.messaging.processor
+package space.geek.ktassets.messaging.processor.asset
 
 import mu.KotlinLogging
 import org.springframework.stereotype.Component
-import space.geek.ktassets.appilcation.asset.AssetService
+import space.geek.ktassets.application.asset.AssetService
 import space.geek.ktassets.messaging.MessageType
 
 private val log = KotlinLogging.logger {}

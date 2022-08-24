@@ -1,4 +1,4 @@
-package space.geek.ktassets.messaging.processor
+package space.geek.ktassets.messaging.processor.asset
 
 import space.geek.ktassets.domain.asset.AssetCreationCommand
 

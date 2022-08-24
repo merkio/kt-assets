@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.kafka.core.KafkaTemplate
 import space.geek.ktassets.messaging.Fixtures.CONSUMER_TOPIC
-import space.geek.ktassets.messaging.processor.AssetMessage
+import space.geek.ktassets.messaging.processor.asset.AssetMessage
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 

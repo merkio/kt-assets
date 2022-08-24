@@ -7,8 +7,8 @@
         <groupId>space.geek</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
+    <modelVersion>4.0.0</modelVersion>
     <artifactId>deployment</artifactId>
 
     <properties>
@@ -16,11 +16,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>space.geek</groupId>
-            <artifactId>domain</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <dependency>
             <groupId>space.geek</groupId>
             <artifactId>application</artifactId>
@@ -38,25 +33,19 @@
         </dependency>
         <dependency>
             <groupId>space.geek</groupId>
-            <artifactId>remote</artifactId>
+            <artifactId>api</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>space.geek</groupId>
-            <artifactId>api</artifactId>
+            <artifactId>remote</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <!-- ArchUnit: used to enforce code architecture -->
         <dependency>
             <groupId>com.tngtech.archunit</groupId>
-            <artifactId>archunit-junit5-api</artifactId>
-            <version>${archunit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.tngtech.archunit</groupId>
-            <artifactId>archunit-junit5-engine</artifactId>
+            <artifactId>archunit-junit5</artifactId>
             <version>${archunit.version}</version>
             <scope>test</scope>
         </dependency>
@@ -65,12 +54,6 @@
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>postgresql</artifactId>
-            <version>${testcontainers.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>r2dbc</artifactId>
             <version>${testcontainers.version}</version>
             <scope>test</scope>
         </dependency>
@@ -94,6 +77,10 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

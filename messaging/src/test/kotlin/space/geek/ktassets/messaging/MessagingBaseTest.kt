@@ -15,7 +15,7 @@ import org.testcontainers.junit.jupiter.Testcontainers
 import org.testcontainers.utility.DockerImageName
 import space.geek.ktassets.messaging.Fixtures.CONSUMER_GROUP_ID
 import space.geek.ktassets.messaging.Fixtures.CONSUMER_TOPIC
-import space.geek.ktassets.messaging.processor.AssetProcessor
+import space.geek.ktassets.messaging.processor.asset.AssetProcessor
 
 @SpringBootTest
 @Testcontainers

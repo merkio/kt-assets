@@ -6,6 +6,11 @@ import space.geek.ktassets.domain.asset.Asset
 import space.geek.ktassets.domain.asset.AssetCreationCommand
 import space.geek.ktassets.domain.asset.AssetRepositoryAdapter
 
+interface AssetRepository : JpaRepository<AssetEntity, String> {
+
+    fun findByKey(key: String): AssetEntity?
+}
+
 @Component
 internal class AssetRepositoryAdapterImpl(
     private val repository: AssetRepository
@@ -16,9 +21,4 @@ internal class AssetRepositoryAdapterImpl(
 
     override fun createAsset(command: AssetCreationCommand): Asset =
         repository.save(AssetEntity.from(command)).to()
-}
-
-interface AssetRepository : JpaRepository<AssetEntity, String> {
-
-    fun findByKey(key: String): AssetEntity?
 }
