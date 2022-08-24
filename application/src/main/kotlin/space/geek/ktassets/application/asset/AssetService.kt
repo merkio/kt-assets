@@ -1,4 +1,4 @@
-package space.geek.ktassets.appilcation.asset
+package space.geek.ktassets.application.asset
 
 import org.springframework.stereotype.Service
 import space.geek.ktassets.domain.asset.Asset

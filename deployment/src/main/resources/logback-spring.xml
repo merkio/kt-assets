@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+    <jmxConfigurator/>
+
+    <springProfile name="production">
+        <appender name="consoleJsonAppender" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+        </appender>
+
+        <logger name="jsonLogger" additivity="false" level="INFO">
+            <appender-ref ref="consoleJsonAppender"/>
+        </logger>
+
+        <root level="INFO">
+            <appender-ref ref="consoleJsonAppender"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="development">
+        <appender name="consoleJsonAppender" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+        </appender>
+
+        <logger name="space.geek.ktassets" level="INFO"/>
+
+        <logger name="jsonLogger" additivity="false" level="INFO">
+            <appender-ref ref="consoleJsonAppender"/>
+        </logger>
+
+        <root level="INFO">
+            <appender-ref ref="consoleJsonAppender"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="default, local">
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
+</configuration>

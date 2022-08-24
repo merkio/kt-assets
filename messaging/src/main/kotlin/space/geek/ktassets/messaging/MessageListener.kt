@@ -5,8 +5,8 @@ import org.springframework.kafka.annotation.KafkaListener
 import org.springframework.messaging.handler.annotation.Header
 import org.springframework.messaging.handler.annotation.Payload
 import org.springframework.stereotype.Component
-import space.geek.ktassets.messaging.processor.AssetMessage
-import space.geek.ktassets.messaging.processor.AssetProcessor
+import space.geek.ktassets.messaging.processor.asset.AssetMessage
+import space.geek.ktassets.messaging.processor.asset.AssetProcessor
 
 private val log = KotlinLogging.logger {}
 

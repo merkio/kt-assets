@@ -15,7 +15,7 @@ import org.testcontainers.junit.jupiter.Testcontainers
 import org.testcontainers.utility.DockerImageName
 import space.geek.ktassets.messaging.Fixtures.CONSUMER_GROUP_ID
 import space.geek.ktassets.messaging.Fixtures.CONSUMER_TOPIC
-import space.geek.ktassets.messaging.processor.AssetProcessor
+import space.geek.ktassets.messaging.processor.asset.AssetProcessor
 
 @SpringBootTest
 @Testcontainers
@@ -35,7 +35,7 @@ internal class MessagingBaseTest {
         val container = KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:7.0.5")).apply {
             withReuse(true)
             withEnv("KAFKA_AUTO_OFFSET_RESET", "earliest")
-            withEnv("KAFKA_MAX_POLL_RECORDS", "1");
+            withEnv("KAFKA_MAX_POLL_RECORDS", "1")
         }
 
         @JvmStatic

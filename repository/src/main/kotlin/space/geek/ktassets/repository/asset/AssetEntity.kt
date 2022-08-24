@@ -31,8 +31,8 @@ data class AssetEntity(
     @Type(type = "json")
     @Column(columnDefinition = "jsonb")
     val tags: Map<String, String> = emptyMap(),
-    @LastModifiedBy
     // To set username from security context and use UserAuditorAware, property should be mutable (var)
+    @LastModifiedBy
     var username: String? = null,
     @Type(type = "json")
     @Column(columnDefinition = "jsonb")

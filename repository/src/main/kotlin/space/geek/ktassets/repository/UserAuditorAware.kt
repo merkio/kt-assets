@@ -6,7 +6,7 @@ import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.stereotype.Component
 import java.util.Optional
 
-private val log = KotlinLogging.logger{}
+private val log = KotlinLogging.logger {}
 
 @Component
 internal class UserAuditorAware : AuditorAware<String> {
