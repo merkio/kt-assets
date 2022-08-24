@@ -9,6 +9,7 @@ internal class HexagonalArchitectureTest {
 
     @ArchTest
     val layeredArchitectureTest: Architectures.LayeredArchitecture = Architectures.layeredArchitecture()
+        .consideringAllDependencies()
         .layer("API").definedBy("space.geek.ktassets.api..")
         .layer("Messaging").definedBy("space.geek.ktassets.messaging..")
         .layer("Remote").definedBy("space.geek.ktassets.remote..")
