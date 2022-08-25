@@ -55,6 +55,7 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true # optional (default = false)
+          file: ./deployment/target/site/jacoco-aggregate/jacoco.xml
           verbose: true
 
       - if: ${{ github.actor == 'dependabot[bot]' }}
