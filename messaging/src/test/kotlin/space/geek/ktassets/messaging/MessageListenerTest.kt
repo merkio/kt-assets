@@ -34,4 +34,22 @@ internal class MessageListenerTest : MessagingBaseTest() {
 
         verify(exactly = 1) { assetProcessor.onMessage(any(), any()) }
     }
+
+    @Test
+    fun `receive message with unknown type`() {
+        val event = AssetMessage(
+            key = "file",
+            url = null
+        )
+        val latch = CountDownLatch(1)
+        every { assetProcessor.onMessage(any(), any()) }.returns(Unit).andThenAnswer { latch.countDown() }
+
+        val record = ProducerRecord<String, AssetMessage>(CONSUMER_TOPIC, event)
+        kafkaTemplate.send(record)
+        kafkaTemplate.flush()
+
+        latch.await(3, TimeUnit.SECONDS)
+
+        verify(exactly = 0) { assetProcessor.onMessage(any(), any()) }
+    }
 }

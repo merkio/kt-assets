@@ -26,7 +26,7 @@ internal class MessageListener(
             MessageType.UPDATE_ASSET,
             MessageType.DELETE_ASSET -> assetProcessor.onMessage(message, type)
 
-            else -> log.warn { "Unknown message type: $type" }
+            else -> log.warn { "Unknown message type: $type with message body: $message" }
         }
     }
 }
