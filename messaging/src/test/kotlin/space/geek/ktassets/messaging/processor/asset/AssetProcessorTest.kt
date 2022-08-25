@@ -1,6 +1,5 @@
 package space.geek.ktassets.messaging.processor.asset
 
-import io.mockk.clearAllMocks
 import io.mockk.clearMocks
 import io.mockk.every
 import io.mockk.mockk
