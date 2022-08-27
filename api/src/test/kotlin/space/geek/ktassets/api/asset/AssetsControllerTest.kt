@@ -13,7 +13,6 @@ import space.geek.ktassets.application.asset.AssetService
 import space.geek.ktassets.domain.asset.Asset
 import java.time.OffsetDateTime
 
-
 @WebMvcTest(controllers = [AssetsController::class])
 internal class AssetsControllerTest {
 
@@ -25,17 +24,18 @@ internal class AssetsControllerTest {
 
     @Test
     fun `upload new asset`() {
-
-        every { assetService.createAsset(any()) }.returns(Asset(
-            id = 1,
-            key = "test",
-            url = null,
-            tags = emptyMap(),
-            username = null,
-            metadata = emptyMap(),
-            createdAt = OffsetDateTime.now(),
-            updatedAt = OffsetDateTime.now()
-        ))
+        every { assetService.createAsset(any()) }.returns(
+            Asset(
+                id = 1,
+                key = "test",
+                url = null,
+                tags = emptyMap(),
+                username = null,
+                metadata = emptyMap(),
+                createdAt = OffsetDateTime.now(),
+                updatedAt = OffsetDateTime.now()
+            )
+        )
         val file = MockMultipartFile(
             "file",
             "Test.txt",
@@ -46,7 +46,8 @@ internal class AssetsControllerTest {
         mvc.perform(
             multipart("/assets/upload")
                 .file(file)
-                .param("key", "test"))
+                .param("key", "test")
+        )
             .andExpect(status().isOk)
     }
 }

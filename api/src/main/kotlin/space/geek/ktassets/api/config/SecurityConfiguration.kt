@@ -8,8 +8,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(securedEnabled=true)
-internal class SecurityConfiguration: WebSecurityConfigurerAdapter() {
+@EnableGlobalMethodSecurity(securedEnabled = true)
+internal class SecurityConfiguration : WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity?) {
         http?.let {
@@ -21,5 +21,4 @@ internal class SecurityConfiguration: WebSecurityConfigurerAdapter() {
                 .and().formLogin().disable()
         }
     }
-
 }

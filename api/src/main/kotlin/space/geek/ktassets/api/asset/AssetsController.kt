@@ -33,7 +33,7 @@ data class AssetRequest(
     fun toAssetCreationCommand(): AssetCreationCommand =
         AssetCreationCommand(
             key = key,
-            url = null,
+            url = null
         )
 }
 
