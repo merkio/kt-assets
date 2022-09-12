@@ -12,7 +12,7 @@
     <artifactId>repository</artifactId>
 
     <properties>
-        <hibernate-types.version>2.18.0</hibernate-types.version>
+        <hibernate-types.version>2.19.1</hibernate-types.version>
     </properties>
 
     <dependencies>
