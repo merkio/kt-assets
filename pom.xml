@@ -33,7 +33,7 @@
         </sonar.coverage.jacoco.xmlReportPaths>
         <java.version>17</java.version>
         <kotlin.version>1.7.10</kotlin.version>
-        <testcontainers.version>1.17.3</testcontainers.version>
+        <testcontainers.version>1.17.5</testcontainers.version>
         <archunit.version>1.0.0-rc1</archunit.version>
         <kotlin-logging.version>2.1.23</kotlin-logging.version>
         <app.version>${project.version}</app.version>
