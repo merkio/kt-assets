@@ -39,7 +39,7 @@
         <app.version>${project.version}</app.version>
         <mockk.version>1.13.3</mockk.version>
         <springmockk.version>4.0.0</springmockk.version>
-        <awssdk.version>2.17.243</awssdk.version>
+        <awssdk.version>2.19.17</awssdk.version>
     </properties>
     <dependencies>
         <dependency>
