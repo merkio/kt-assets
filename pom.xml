@@ -35,7 +35,7 @@
         <kotlin.version>1.7.22</kotlin.version>
         <testcontainers.version>1.17.6</testcontainers.version>
         <archunit.version>1.0.1</archunit.version>
-        <kotlin-logging.version>3.0.4</kotlin-logging.version>
+        <kotlin-logging.version>3.0.5</kotlin-logging.version>
         <app.version>${project.version}</app.version>
         <mockk.version>1.13.3</mockk.version>
         <springmockk.version>4.0.0</springmockk.version>
