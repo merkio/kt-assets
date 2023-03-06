@@ -38,7 +38,7 @@
         <kotlin-logging.version>3.0.4</kotlin-logging.version>
         <app.version>${project.version}</app.version>
         <mockk.version>1.13.3</mockk.version>
-        <springmockk.version>4.0.0</springmockk.version>
+        <springmockk.version>4.0.1</springmockk.version>
         <awssdk.version>2.17.243</awssdk.version>
     </properties>
     <dependencies>
